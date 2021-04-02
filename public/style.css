@@ -1,0 +1,150 @@
+/* 
+font-family: 'Press Start 2P', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Roboto', sans-serif; 
+#C6FF00
+#3C3A3A
+*/
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #3c3a3a;
+}
+body {
+  background: #add400;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  margin: 0 10px 10px 10px;
+}
+
+.btn {
+  border: solid 4px rgb(151, 148, 148);
+  padding: 10px 30px;
+  font-weight: 700;
+  font-family: "Press Start 2P", cursive;
+  color: rgb(214, 212, 212);
+  font-size: 1.2rem;
+  background: none;
+}
+.btn:hover {
+  background: rgba(9, 9, 9, 0.3);
+}
+.menu {
+  height: 60px;
+  display: flex;
+  z-index: 10;
+  align-items: center;
+  justify-content: space-between;
+}
+.content {
+  position: relative;
+}
+
+.pantalla {
+  background-color: rgba(6, 6, 6, 0.3);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 2rem;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  margin: 5px;
+  display: none;
+}
+.pantalla__title {
+  background: radial-gradient(
+    circle 929px at 0.6% 1.3%,
+    rgb(192, 192, 192) 0%,
+    rgb(143, 143, 143) 62.6%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  padding: 10px;
+  line-height: 70px;
+}
+.pantalla__title::after {
+  content: "GAME OVER";
+  -webkit-text-fill-color: #333232;
+  color: red;
+  position: absolute;
+  left: 2px;
+  top: 0px;
+  z-index: -1; /* Added this */
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: solid 6px #3c3a3a;
+}
+
+.controles {
+  position: relative;
+  top: 60vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px;
+}
+.btn_secundario {
+  border-radius: 50%;
+  font-weight: 700;
+  padding: 13px;
+  background: rgb(151, 148, 148);
+}
+.btn_secundario:hover {
+  background: rgb(95, 95, 95);
+}
+.flechas {
+  width: 194px;
+}
+.controles__btnLeft {
+  position: relative;
+  left: 5px;
+  top: 60px;
+}
+.controles__btnRight {
+  position: relative;
+  left: -5px;
+  top: 60px;
+}
+.controles__btnDown {
+  position: relative;
+  top: 60px;
+}
+/* .controles__btnUp {
+  position: relative;
+  left: 80px;
+  top: 15px;
+}
+} */
+.start {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-basis: 30%;
+  height: 100%;
+}
+.controles__start {
+  position: relative;
+  top: -10px;
+  transform: rotate(-45deg);
+  font-size: 0.5rem;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 10px;
+  }
+}
